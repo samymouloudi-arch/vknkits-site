@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Place your order | VKNKITS</title>
+<meta name="description" content="Order your $50 mystery football kit. Pick your size, tell us which teams to skip, and we handpick the rest.">
+<meta property="og:title" content="Place your order | VKNKITS">
+<meta property="og:description" content="Order your $50 mystery football kit. Pick your size, tell us which teams to skip, and we handpick the rest.">
+<meta property="og:image" content="img/vkn-3.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/anton-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="announce cap">Mystery kits — $50 each · Handpicked to match your style</div>
+<header class="header">
+<div class="wrap">
+<a href="index.html" class="logo" aria-label="VKNKITS home">vkn</a>
+<nav class="nav" aria-label="Main">
+<a href="index.html">Home</a>
+<a href="order.html" aria-current="page">Place Your Order</a>
+<a href="kit-shuffle.html">Kit Shuffle</a>
+<a href="index.html#about">About Us</a>
+<a href="index.html#faq">F.A.Q</a>
+</nav>
+<div class="icons">
+<a href="https://www.instagram.com/vknkits/" class="icon-btn" aria-label="VKNKITS on Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+<button type="button" class="icon-btn menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div>
+</div>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+<a href="index.html">Home</a>
+<a href="order.html">Place Your Order</a>
+<a href="kit-shuffle.html">Kit Shuffle</a>
+<a href="index.html#about">About Us</a>
+<a href="index.html#faq">F.A.Q</a>
+</nav>
+</header>
+<main id="main" class="form-page">
+<div class="leak" style="width:700px;height:600px;left:-260px;top:-160px;opacity:.4"></div>
+<div class="wrap form-grid">
+
+<div class="sticky">
+<div class="media" style="overflow:hidden">
+<img src="img/di2a5200.jpg" alt="Model wearing a mystery kit">
+<div class="leak" style="width:80%;height:60%;right:-20%;top:-15%;filter:blur(50px);opacity:.6"></div>
+<div class="tag" style="display:flex;align-items:baseline;gap:10px;padding:16px 22px"><span class="anton strong" style="font-size:44px;line-height:1">$50</span><span class="cap muted">per kit</span></div>
+</div>
+<div class="cap" style="color:var(--faint)">Handpicked · Top quality · One-of-a-kind surprise</div>
+</div>
+
+<form class="form" id="order-form" name="order" method="POST" action="thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="order">
+<p class="sr-only"><label>Don’t fill this out: <input name="bot-field"></label></p>
+<input type="hidden" name="teams_to_skip" value="">
+<input type="hidden" name="total" value="$50">
+
+<div class="stack" style="gap:18px">
+<div class="cap muted">Place your order</div>
+<h1 class="anton big">Mystery kit</h1>
+<p class="body">We’re excited to get your order started! Just fill out the details below — it only takes a minute. Please make sure your information is accurate for timely delivery.</p>
+</div>
+
+<fieldset>
+<legend>1 — Your size</legend>
+<div class="pills">
+<label class="pill"><input type="radio" name="size" value="XS" required><span>XS</span></label>
+<label class="pill"><input type="radio" name="size" value="S"><span>S</span></label>
+<label class="pill"><input type="radio" name="size" value="M" checked><span>M</span></label>
+<label class="pill"><input type="radio" name="size" value="L"><span>L</span></label>
+<label class="pill"><input type="radio" name="size" value="XL"><span>XL</span></label>
+<label class="pill"><input type="radio" name="size" value="XXL"><span>XXL</span></label>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>2 — Teams you do NOT want</legend>
+<p class="hint">Tell us who to skip so we can guarantee you’ll love what you get.</p>
+<div class="chips">
+<label class="chip"><input type="checkbox" data-team value="Real Madrid"><span>Real Madrid</span></label>
+<label class="chip"><input type="checkbox" data-team value="Barcelona"><span>Barcelona</span></label>
+<label class="chip"><input type="checkbox" data-team value="Man United"><span>Man United</span></label>
+<label class="chip"><input type="checkbox" data-team value="Man City"><span>Man City</span></label>
+<label class="chip"><input type="checkbox" data-team value="Liverpool"><span>Liverpool</span></label>
+<label class="chip"><input type="checkbox" data-team value="Arsenal"><span>Arsenal</span></label>
+<label class="chip"><input type="checkbox" data-team value="PSG"><span>PSG</span></label>
+<label class="chip"><input type="checkbox" data-team value="Bayern"><span>Bayern</span></label>
+<label class="chip"><input type="checkbox" data-team value="Juventus"><span>Juventus</span></label>
+<label class="chip"><input type="checkbox" data-team value="CF Montréal"><span>CF Montréal</span></label>
+</div>
+<div class="field"><label for="other_teams">Anyone else?</label><input id="other_teams" type="text" placeholder="e.g. Chelsea, Inter Miami"></div>
+</fieldset>
+
+<fieldset>
+<legend>3 — Your details</legend>
+<div class="two">
+<div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+<div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+</div>
+<div class="field"><label for="phone">Phone (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+<div class="field"><label for="address">Street address</label><input id="address" name="address" type="text" autocomplete="street-address" required></div>
+<div class="two">
+<div class="field"><label for="city">City</label><input id="city" name="city" type="text" autocomplete="address-level2" required></div>
+<div class="field"><label for="postal">Postal code</label><input id="postal" name="postal_code" type="text" autocomplete="postal-code" required></div>
+</div>
+<div class="field"><label for="notes">Anything else? (optional)</label><textarea id="notes" name="notes" rows="3" placeholder="Gift, style preferences, era you love…"></textarea></div>
+</fieldset>
+
+<div class="summary">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+<label class="cap" for="quantity">Quantity</label>
+<div class="qty">
+<button type="button" data-qty="-" aria-label="Fewer kits">−</button>
+<input id="quantity" name="quantity" type="number" min="1" max="10" value="1" inputmode="numeric">
+<button type="button" data-qty="+" aria-label="More kits">+</button>
+</div>
+</div>
+<div class="cap" style="display:flex;justify-content:space-between;color:var(--faint);border-top:1px solid var(--line);padding-top:16px;flex-wrap:wrap;gap:8px">
+<span>Size <span data-size>M</span> · <span data-skip-count>0</span> teams skipped</span><span>$50 per kit</span>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span class="cap">Total</span><span class="anton total" data-total>$50</span></div>
+<label class="check"><input type="checkbox" name="agree_final_sale" value="yes" required><span>I understand all sales are final. Damaged or defective kits can be exchanged.</span></label>
+<button type="submit" class="btn btn-solid" style="min-height:60px;letter-spacing:.2em">Send my order</button>
+<p class="hint">No payment online. We’ll email you to confirm your order and payment details.</p>
+</div>
+</form>
+
+</div>
+</main>
+<footer class="footer">
+<div class="leak" style="width:900px;height:500px;right:-200px;bottom:-260px;opacity:.45"></div>
+<div class="wrap">
+<div class="foot">
+<div class="foot-col" style="gap:18px">
+<div class="anton strong" style="font-size:34px;line-height:1.05;max-width:18ch">Unlock the unexpected</div>
+<p class="muted" style="max-width:36ch">Mystery football kits, handpicked in Laval. Follow the drops on Instagram.</p>
+<div class="row"><a href="order.html" class="btn btn-solid">Place your order</a></div>
+</div>
+<div class="foot-col">
+<div class="cap">Shop</div>
+<a href="order.html">Place Your Order</a>
+<a href="kit-shuffle.html">Kit Shuffle</a>
+</div>
+<div class="foot-col">
+<div class="cap">Info</div>
+<a href="index.html#about">About Us</a>
+<a href="index.html#faq">F.A.Q</a>
+</div>
+<div class="foot-col">
+<div class="cap">Contact</div>
+<a href="mailto:vknkits@gmail.com">vknkits@gmail.com</a>
+<a href="https://www.instagram.com/vknkits/">Instagram</a>
+</div>
+</div>
+<div class="wordmark" aria-hidden="true">vkn</div>
+<div class="legal cap"><span>© <span data-year>2026</span> VKNKITS</span><span>Luck looks good on you</span></div>
+</div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

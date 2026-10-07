@@ -1,0 +1,32 @@
+VKNKITS — site web
+==================
+
+Pages
+  index.html        Accueil (Mystery Kit, galerie, Kit Shuffle, FAQ, About Us)
+  order.html        Formulaire de commande
+  kit-shuffle.html  Formulaire d'échange Kit Shuffle
+  thanks.html       Page « merci » après l'envoi d'un formulaire
+
+Dossiers
+  css/style.css   Couleurs et polices (tout en haut, dans :root)
+  js/main.js      Animations (carte mystère, menu mobile, total de la commande)
+  img/            Photos
+  fonts/          Polices Anton et Epilogue
+  videos/         Mettre ici :  vkn-02.mp4  et  kit-shuffle.mp4
+                  (tant qu'elles ne sont pas là, une photo s'affiche à la place)
+
+Mettre en ligne (Netlify, gratuit)
+  1. Aller sur app.netlify.com/drop
+  2. Glisser le dossier « site » au complet dans la page
+  3. Netlify donne une adresse temporaire pour tester
+  4. Dans Netlify : Site configuration > Forms > activer la détection des formulaires,
+     puis Notifications > ajouter ton courriel pour recevoir chaque commande.
+     (Refaire un dépôt du dossier après avoir activé la détection.)
+  5. Domain management > ajouter vknkits.com
+
+Modifier un texte
+  Ouvrir le fichier .html avec un éditeur de texte (TextEdit en mode texte brut,
+  ou VS Code), chercher la phrase, la changer, enregistrer, re-glisser le dossier sur Netlify.
+
+Le fichier _redirects garde les anciens liens Squarespace fonctionnels
+(/place-your-order, /new-page, /contact-us, /matchday-promo).
