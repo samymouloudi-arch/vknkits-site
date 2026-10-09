@@ -117,7 +117,11 @@ h1, h2, h3 { margin: 0; }
 
 /* Film (video) band */
 .film { position: relative; height: min(78vh, 760px); overflow: hidden; background: #000; }
-.film video, .film img.poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .7; }
+.film video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .7; z-index: 1; }
+/* Photo strip shown behind / instead of the video: 4 portrait photos side by side, so nothing gets over-zoomed */
+.film-strip { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 4px; }
+.film-strip img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; opacity: .55; filter: grayscale(.2); }
+.film-copy .cap { color: var(--text) !important; text-shadow: 0 1px 12px rgba(0,0,0,.8); }
 .film::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(10,10,10,.85) 0%, rgba(10,10,10,.2) 45%, rgba(10,10,10,0) 70%); }
 .film-copy { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 56px; }
 .film-copy .anton { font-size: clamp(56px, 9vw, 140px); line-height: .88; color: var(--text-strong); }
@@ -223,6 +227,8 @@ legend { font-family: var(--head); text-transform: uppercase; font-size: 28px; c
   .mobile-nav a { font-family: var(--head); text-transform: uppercase; font-size: 30px; text-decoration: none; padding: 8px 0; color: var(--text-strong); }
   .hero-grid, .split, .faq, .form-grid, .two { grid-template-columns: minmax(0,1fr); }
   .fan { height: 440px; max-width: 480px; width: 100%; margin: 0 auto; }
+  .film-strip { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .film-strip img:nth-child(n+3) { display: none; }
   .collage { height: 440px; max-width: 480px; width: 100%; margin: 0 auto; }
   .steps { grid-template-columns: minmax(0,1fr); }
   .look { columns: 2 140px; }
