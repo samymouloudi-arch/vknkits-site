@@ -1,0 +1,50 @@
+# Administration du site VKNKITS (Decap CMS)
+# Connexion avec un compte GitHub qui a accès au dépôt.
+backend:
+  name: github
+  repo: samymouloudi-arch/vknkits-site
+  branch: main
+  commit_messages:
+    update: "Admin : mise à jour de {{collection}} « {{slug}} »"
+    uploadMedia: "Admin : ajout du fichier {{path}}"
+    deleteMedia: "Admin : suppression du fichier {{path}}"
+
+locale: fr
+site_url: https://vknkits.com
+display_url: https://vknkits.com
+logo_url: /img/favicon.svg
+
+# Les vidéos déposées vont dans le dossier /videos du site
+media_folder: videos
+public_folder: /videos
+
+collections:
+  - name: contenu
+    label: Contenu du site
+    editor:
+      preview: false
+    files:
+      - name: promos
+        label: Vidéos promo
+        file: data/promos.json
+        description: "La première vidéo de la liste s'affiche en grand sur l'accueil. Exporte en MP4, 720p, moins de 25 Mo."
+        fields:
+          - label: Vidéos
+            name: videos
+            widget: list
+            add_to_top: true
+            summary: "{{fields.titre}}"
+            fields:
+              - { label: Titre, name: titre, widget: string }
+              - { label: Petit texte (optionnel), name: texte, widget: string, required: false }
+              - { label: Vidéo (MP4), name: video, widget: file, allow_multiple: false }
+              - { label: Image d'aperçu (optionnel), name: apercu, widget: image, required: false, media_folder: /img/promos, public_folder: /img/promos }
+              - { label: Afficher sur le site, name: visible, widget: boolean, default: true }
+
+      - name: instagram
+        label: Instagram
+        file: data/instagram.json
+        description: "Colle ici le lien du flux JSON Behold (behold.so) pour afficher automatiquement les derniers posts de @vknkits."
+        fields:
+          - { label: Lien du flux Behold (JSON), name: feed_url, widget: string, required: false }
+          - { label: Nombre de posts affichés, name: nombre, widget: number, value_type: int, default: 8, min: 4, max: 12 }

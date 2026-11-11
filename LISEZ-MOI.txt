@@ -30,3 +30,12 @@ Modifier un texte
 
 Le fichier _redirects garde les anciens liens Squarespace fonctionnels
 (/place-your-order, /new-page, /contact-us, /matchday-promo).
+
+Administration (vidéos promo et Instagram)
+  Adresse : https://vknkits.com/admin
+  Connexion avec un compte GitHub qui a accès au dépôt vknkits-site.
+  - Vidéos promo : ajouter une vidéo (MP4, 720p, moins de 25 Mo), un titre, puis Publier.
+    La première vidéo de la liste s'affiche aussi en grand sur l'accueil.
+    Le site se met à jour tout seul en environ 1 minute.
+  - Instagram : coller le lien du flux JSON Behold (behold.so) pour afficher les derniers posts.
+    Sans lien, les photos actuelles restent affichées.

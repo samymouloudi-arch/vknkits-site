@@ -253,3 +253,27 @@ legend { font-family: var(--head); text-transform: uppercase; font-size: 28px; c
   .flip-inner { transition: none; }
   html { scroll-behavior: auto; }
 }
+
+/* ---------- Promo videos (managed from /admin) ---------- */
+.promo-row { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(240px, 300px); gap: 16px; overflow-x: auto; margin-top: 48px; padding-bottom: 12px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
+.promo-card { margin: 0; scroll-snap-align: start; display: flex; flex-direction: column; gap: 14px; }
+.promo-card.is-new { grid-column: span 1; }
+.promo-media { position: relative; aspect-ratio: 9/16; background: #000; overflow: hidden; border: 1px solid var(--line); }
+.promo-media video { width: 100%; height: 100%; object-fit: cover; }
+.promo-play { position: absolute; inset: 0; width: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(to top, rgba(10,10,10,.55), rgba(10,10,10,0) 55%); border: 0; color: var(--text-strong); cursor: pointer; }
+.promo-play svg { width: 64px; height: 64px; padding: 18px; border-radius: 999px; background: rgba(10,10,10,.6); border: 1px solid var(--text-strong); transition: transform .2s; }
+.promo-play:hover svg { transform: scale(1.08); }
+.promo-card.is-playing .promo-play { display: none; }
+.promo-badge { position: absolute; left: 12px; top: 12px; background: var(--leak); color: var(--bg); padding: 6px 10px; }
+.promo-card.is-playing .promo-badge { display: none; }
+.promo-title { font-size: 24px; line-height: 1.05; color: var(--text-strong); }
+.promo-text { font-size: 15px; color: var(--muted); margin-top: 6px; }
+
+/* ---------- Instagram live feed ---------- */
+.ig-post { position: relative; display: block; overflow: hidden; }
+.ig-post img { width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform .4s, filter .4s; }
+.ig-post:hover img { transform: scale(1.05); filter: brightness(.8); }
+.ig-kind { position: absolute; right: 10px; top: 8px; color: #fff; font-size: 16px; text-shadow: 0 1px 6px rgba(0,0,0,.7); }
+@media (max-width: 900px) {
+  .promo-row { grid-auto-columns: 72%; }
+}

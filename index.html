@@ -89,12 +89,10 @@
 <img src="img/vkn-2.jpg" alt="" loading="lazy">
 <img src="img/vkn-4.jpg" alt="" loading="lazy">
 </div>
-<video data-bg autoplay muted loop playsinline preload="metadata">
-<source src="videos/vkn-02.mp4" type="video/mp4">
-</video>
+<video data-film-video muted loop playsinline preload="none" hidden></video>
 <div class="leak"></div>
 <div class="film-copy"><div class="wrap"><div class="cap muted" style="margin-bottom:16px">Every box, a moment of football magic</div><div class="anton">Luck looks<br>good on you</div></div></div>
-<button type="button" class="icon-btn film-toggle" data-video-toggle aria-label="Pause video"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg></button>
+<button type="button" class="icon-btn film-toggle" data-film-toggle aria-label="Pause video" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg></button>
 </section>
 
 <section class="section" id="mystery">
@@ -122,6 +120,19 @@
 <div class="step"><div class="num anton">02</div><div><h3 class="anton">We handpick it</h3><p>Curated just for you, checked for top quality.</p></div></div>
 <div class="step hot"><div class="leak" style="width:80%;height:90%;right:-30%;top:-30%;filter:blur(50px);opacity:.45"></div><div class="num anton">03</div><div><h3 class="anton">Unlock the unexpected</h3><p>Open the box. A moment of football magic.</p></div></div>
 </div>
+</div>
+</section>
+
+<section class="section promo" id="promo" hidden>
+<div class="wrap">
+<div class="section-head">
+<div class="stack" style="gap:16px">
+<div class="cap muted">The drop — en vidéo</div>
+<h2 class="anton big" style="font-size:clamp(56px,8vw,120px)">Latest drops</h2>
+</div>
+<a href="order.html" class="btn btn-solid">Place your order — $50</a>
+</div>
+<div class="promo-row" data-promos></div>
 </div>
 </section>
 
@@ -218,13 +229,13 @@
 </div>
 </section>
 
-<section class="section" style="padding-top:104px;padding-bottom:112px">
+<section class="section" id="instagram" style="padding-top:104px;padding-bottom:112px">
 <div class="wrap">
 <div class="section-head">
 <h2 class="anton strong" style="font-size:clamp(44px,5vw,76px);line-height:.92">@vknkits</h2>
 <a href="https://www.instagram.com/vknkits/" class="btn btn-line"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> Follow on Instagram</a>
 </div>
-<div class="ig">
+<div class="ig" data-ig>
 <img src="img/vkn-5.jpg" alt="Model in a Germany jersey" loading="lazy">
 <img src="img/di2a5980.jpg" alt="Close-up of a Colo-Colo jersey with a film camera" loading="lazy">
 <img src="img/di2a2957.jpg" alt="Brazil jersey at the arcade" loading="lazy" style="object-position:top">
@@ -264,5 +275,6 @@
 </div>
 </footer>
 <script src="js/main.js"></script>
+<script src="js/content.js"></script>
 </body>
 </html>
